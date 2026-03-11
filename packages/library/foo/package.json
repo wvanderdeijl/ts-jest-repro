@@ -1,5 +1,5 @@
 {
-  "main": "../dist/cjs/foo/index.js",
-  "module": "../dist/esm/foo/index.js",
-  "types": "../dist/types/foo/index.d.ts"
+  "main": "../dist/nested-cjs.js",
+  "module": "../dist/nested-esm.js",
+  "types": "../dist/nested-types.d.ts"
 }

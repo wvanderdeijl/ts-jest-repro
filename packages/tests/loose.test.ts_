@@ -1,0 +1,12 @@
+import { thing } from "library/foo";
+
+// This will not give a compilation error when the wrong types for `library/foo` have been resolved (initial run after `--clear-cache`)
+// apparently only resolving of the types fail and resolving of the actual javascript does succeed to the correct file.
+//
+// File renamed to `.ts_` extension as the test is not needed to reproduce the issue, but can be renamed to `.ts` to see this behavior.
+
+const local: string = thing;
+
+test("thing", async () => {
+  expect(local).toBe('root-entrypoint-cjs');
+});
